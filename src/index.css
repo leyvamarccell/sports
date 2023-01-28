@@ -24,13 +24,6 @@ a:hover {
   color: #535bf2;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
 
 h1 {
   font-size: 3.2em;
@@ -51,10 +44,7 @@ button {
 button:hover {
   border-color: #646cff;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
+
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -67,4 +57,239 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+#-Hola {
+    background-color: red;
+}
+
+.welcome {
+  width: 340px;
+}
+
+.card-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.section-card {
+  display: flex;
+}
+
+
+
+.gift-card-container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(6, auto);
+  gap: 20px;
+}
+
+.gift-card-container-app {
+  width: auto;
+  padding-right: 300px;
+  padding-left: 300px;
+  display: grid;
+}
+
+.gift-card-img {
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+
+.button {
+  margin-right: auto;
+}
+.button1 {
+  margin-left: 9px;
+}
+
+.text-card {
+  margin-left: 143px;
+  margin-right: 10;
+}
+
+.services-container {
+  width: 412px;
+  height: auto;
+}
+
+.services-container-app {
+  display: grid;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 500px) {
+  .services-container {
+   width: 350px;
+    margin: auto;
+  }
+}
+
+@media (min-width: 830px) {
+  .services-container-app {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
+@media (min-width: 1400px) {
+  .services-container-app {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+
+
+.image-services {
+  display: flex;
+  justify-content: center;
+}
+
+.link-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.portada {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.datos-container {
+  width: 921px;
+}
+
+.visa-container {
+  width: 412px;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.collapse-container {
+  padding: 7px;
+  margin: auto;
+}
+
+@media (min-width: 700px) {
+  .collapse-container {
+    width: 600px;
+  }
+}
+
+.button-depositar {
+  display: flex;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.input-depositar {
+  display: flex;
+  justify-content: center;
+}
+
+.item-container {
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 120px;
+  display: flex;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.image-depositar {
+  padding-left: 5px;
+}
+
+.collapse-content {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+}
+
+@media (min-width: 600px) {
+  .collapse-content {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+
+.collapse-group {
+  
+  padding-right: 30px;
+}
+
+.input-depositar {
+height: 70px;
+border-radius: 10px;
+width: 400px;
+border: none;
+font-size: 40px;
+font-weight: 600;
+color:rgb(100, 100, 100);
+outline: none;
+padding-left: 10px;
+padding-right: 10px;
+text-align: center;
+}
+.input-depositar:hover {
+  box-shadow: 2px 2px 12px gainsboro
+}
+
+.input-depositar-container {
+  display: flex;
+  justify-content: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 30px;
+  }
+
+  .button-dep {
+    margin-top: 25px;
+  }
+
+  .text-depositar {
+    margin-left: 10px;
+  }
+
+.card-juegos{
+ background-color: rgb(210, 210, 210);
+}
+
+.card-juegos-container {
+display: flex;
+}
+
+.img-juegos {
+  height: 200px;
+}
+
+@media (max-width: 500px) {
+  .img-juegos {
+    height: 100px;
+  }
+}
+
+.card-button-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-right: 20px;
+}
+
+.card-text-container {
+  display: flex;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+.card-container {
+padding-left: 10px;
+padding-right: 10px;
+padding-bottom: 10px;
 }
