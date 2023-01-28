@@ -44,9 +44,7 @@ export default function Juegos() {
             <Card.Footer css={{ justifyItems: "flex-start" }}>
               <Row wrap="wrap" justify="space-between" align="center">
                 <Text b>{item.title}</Text>
-                <Text css={{ color: "$accents7", fontWeight: "$semibold", fontSize: "$sm" }}>
-                  {item.price}
-                </Text>
+               
               </Row>
             </Card.Footer>
           </Card>
