@@ -21,7 +21,12 @@ export default function Juegos() {
       title: "Hash Dice",
       img: "https://bc.imgix.net/game/image/d480b6bc-954b-458b-9bac-27b627ad027d.png?auto=format&q=80&dpr=1&w=200",
       price: "$5.30",
-    }
+    },
+    {
+      title: "Coin Flip",
+      img: "https://bc.imgix.net/game/image/57d44e7a-185d-494e-a96d-9f9f1e812d74.png?auto=format&q=80&dpr=1&w=200",
+      price: "$5.30",
+    },
   
   ];
 
