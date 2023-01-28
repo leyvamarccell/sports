@@ -21,12 +21,7 @@ export default function Juegos() {
       title: "Hash Dice",
       img: "https://bc.imgix.net/game/image/d480b6bc-954b-458b-9bac-27b627ad027d.png?auto=format&q=80&dpr=1&w=200",
       price: "$5.30",
-    },
-    {
-        title: "Sports",
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9cDmqWe6Oa3mObbsmF4IvOWFl83WmFLFpvw&usqp=CAU",
-        price: "$15.70",
-      }
+    }
   
   ];
 

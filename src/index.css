@@ -275,21 +275,29 @@ display: flex;
   }
 }
 
-.card-button-container {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-right: 20px;
+.info-container {
+  margin: 10px;
 }
 
-.card-text-container {
-  display: flex;
-  justify-content: center;
-  margin-right: 15px;
+.info-text {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
-.card-container {
-padding-left: 10px;
-padding-right: 10px;
-padding-bottom: 10px;
+.precios-container {
+  margin: 10px;
+}
+
+.coins {
+  display: flex;
+}
+
+.price-text {
+  
+  margin-left: 20px;
+}
+
+.coin-text {
+  margin-left: 20px;
 }
