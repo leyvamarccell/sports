@@ -1,11 +1,19 @@
 import React from "react";
-import { Modal, Input, Row, Checkbox, Button, Text } from "@nextui-org/react";
+import { Modal, Input, Row, Checkbox, Button, Text} from "@nextui-org/react";
 import { Mail } from "./Mail";
 import { Password } from "./Password";
 import { CreateUserWithEmailAndPassword } from "../Auth";
+import { SignInWithGoogle } from "../Auth";
+import { state } from "../Auth";
+import User from '../User'
 
 export let email
 export let password
+
+setTimeout(() => {
+  console.log(state)
+}, 5000);
+
 
 export default function App() {
   const [visible, setVisible] = React.useState(false);
@@ -16,9 +24,12 @@ export default function App() {
   };
   return (
     <div>
-      <Button auto color="gradient" shadow onPress={handler}>
+    {
+      state ? <User/>: <Button auto color="gradient" shadow onPress={handler}>
         Login
-      </Button>
+      </Button> 
+    }
+     
       <Modal
         closeButton
         blur
@@ -56,13 +67,14 @@ export default function App() {
             onChange={e => password = e.target.value}
           />
          
-
+  
           <Row justify="space-between">
             <Checkbox>
               <Text size={14}>Remember me</Text>
             </Checkbox>
             <Text size={14}>Forgot password?</Text>
           </Row>
+          <button onClick={SignInWithGoogle}><img height={20} src="https://www.svgrepo.com/show/475656/google-color.svg" className="img-google" alt="" />Iniciar Sesion con Google</button>
         </Modal.Body>
         <Modal.Footer>
           <Button auto flat color="error" onPress={closeHandler}>

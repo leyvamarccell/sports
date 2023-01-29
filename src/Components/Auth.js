@@ -5,12 +5,14 @@ import { email, password } from "./Modal/Modal.jsx";
 export let state
 export let userPhoto
 export let userName
+export let userEmail
 
 auth.onAuthStateChanged(user => {
     if(user) {
         state = true
         userName = user.displayName
         userPhoto = user.photoURL
+        userEmail = user.email
         //Delete This
         console.log('Login')
     }else {

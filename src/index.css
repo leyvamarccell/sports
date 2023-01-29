@@ -325,12 +325,16 @@ display: flex;
 }
 
 .div-apuesta {
-  background-color: rgb(220, 220, 220);
+ background-color: darkgrey;
   width: 280px;
   height: 60px;
   border-radius: 10px;
-  padding-top: 20px;
+  padding-top: 10px;
   padding-left: 20px;
+}
+
+.div-apuesta:hover {
+  
 }
 
 .text-apuesta {
@@ -355,4 +359,8 @@ display: flex;
 .apuesta-text  {
   padding: 0;
   margin: 0;
+}
+
+.img-google {
+  margin-right: 20px;
 }

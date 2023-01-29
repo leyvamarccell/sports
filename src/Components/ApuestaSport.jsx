@@ -1,4 +1,4 @@
-import { Card } from "@nextui-org/react";
+import { Button, Card } from "@nextui-org/react";
 
 export default function ApuestaSport() {
   return (
@@ -24,9 +24,11 @@ export default function ApuestaSport() {
                     <h4 className="apuesta-text">Real Madrid</h4>
                         <h4 className="apuesta-text ">2.98</h4>
                     </div>
+                    
                 </div>
             </Card.Body>
         </Card>
+        
     </div>
         
     </>

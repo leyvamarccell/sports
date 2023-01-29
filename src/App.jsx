@@ -23,7 +23,6 @@ function App() {
     <ApuestaSport/>
     <ApuestaSport/>
   </div>
-
 </div>
     </>
 

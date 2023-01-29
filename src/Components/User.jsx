@@ -1,5 +1,5 @@
 import { User } from "@nextui-org/react";
-import { userName } from "./Auth";
+import { userEmail, userName } from "./Auth";
 import { userPhoto } from "./Auth";
 
 export default function Users() {
@@ -8,6 +8,7 @@ export default function Users() {
  <User
       src={userPhoto}
       name={userName}
+      description={userEmail}
     />
     </>
    
