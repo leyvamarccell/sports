@@ -3,9 +3,10 @@ import { Modal, Input, Row, Checkbox, Button, Text} from "@nextui-org/react";
 import { Mail } from "./Mail";
 import { Password } from "./Password";
 import { CreateUserWithEmailAndPassword } from "../Auth";
-import { SignInWithGoogle } from "../Auth";
+import { SignInWithGoogle, SignOut } from "../Auth";
 import { state } from "../Auth";
 import User from '../User'
+
 
 export let email
 export let password
@@ -13,7 +14,6 @@ export let password
 setTimeout(() => {
   console.log(state)
 }, 5000);
-
 
 export default function App() {
   const [visible, setVisible] = React.useState(false);
@@ -25,11 +25,11 @@ export default function App() {
   return (
     <div>
     {
-      state ? <User/>: <Button auto color="gradient" shadow onPress={handler}>
+      state ? <div><User/></div>: <Button auto color="gradient" shadow onPress={handler}>
         Login
       </Button> 
     }
-     
+   
       <Modal
         closeButton
         blur
