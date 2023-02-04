@@ -2,6 +2,7 @@ import { Navbar, Button, Link, Text } from "@nextui-org/react";
 import { Layout } from "./Layout.jsx";
 import { AcmeLogo } from "./AcmeLogo.jsx";
 import Modal from '../Modal/Modal.jsx'
+import ModalRegistro from '../ModalRegistro/ModalRegistro'
 
 export default function App() {
 
@@ -15,17 +16,18 @@ export default function App() {
             ACME
           </Text>
         </Navbar.Brand>
-        <Navbar.Content hideIn="xs" variant="underline">
-          <Navbar.Link href="#">Features</Navbar.Link>
-          <Navbar.Link isActive href="#">Customers</Navbar.Link>
-          <Navbar.Link href="#">Pricing</Navbar.Link>
-          <Navbar.Link href="#">Company</Navbar.Link>
-        </Navbar.Content>
+       
         <Navbar.Content>
-         
-          <Navbar.Item>
+       <Navbar.Item>
+<img height={25} src="https://www.svgrepo.com/show/304489/notification.svg" alt="" />
+       </Navbar.Item>
+            <Navbar.Item>
         <Modal/>
+            </Navbar.Item>
+          <Navbar.Item>
+          <ModalRegistro/>
           </Navbar.Item>
+          
         </Navbar.Content>
       </Navbar>
     </Layout>

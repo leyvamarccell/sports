@@ -1,6 +1,9 @@
 import { GoogleAuthProvider, signInWithPopup, createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithEmailLink } from "firebase/auth";
 import {auth} from './firebase.js'
-import { email, password } from "./Modal/Modal.jsx";
+import { email, password, passwordCheck } from "./ModalRegistro/ModalRegistro";
+import { addUsers } from "./Database.js"
+import { emailLogin, passwordLogin } from "./Modal/Modal.jsx";
+import { toast} from "react-hot-toast";
 
 export let state
 export let userPhoto
@@ -13,13 +16,10 @@ auth.onAuthStateChanged(user => {
         userName = user.displayName
         userPhoto = user.photoURL
         userEmail = user.email
-        //Delete This
-        console.log('Login')
     }else {
         state = false
     }
 })
-
 
 export const SignInWithGoogle = () => {
     const provider = new GoogleAuthProvider();
@@ -44,8 +44,31 @@ export const SignInWithGoogle = () => {
       });
 }
 
+let a = 'A'
 export const CreateUserWithEmailAndPassword = () => {
-  createUserWithEmailAndPassword(auth, email, password)
+  if(password !== passwordCheck) {
+    toast.error('Las contraseñas no coinciden')
+  }
+  else {
+    createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Signed in 
+      console.log(userCredential)
+      const user = userCredential.user;
+      // ...
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      // ..
+    });
+  }
+  
+  
+}
+
+export const SignInWithEmail= () => {
+  signInWithEmailAndPassword(auth, emailLogin, passwordLogin)
   .then((userCredential) => {
     // Signed in 
     console.log(userCredential)
@@ -57,12 +80,11 @@ export const CreateUserWithEmailAndPassword = () => {
     const errorMessage = error.message;
     // ..
   });
+  
 }
 
 export const SignOut = () => {
     auth.signOut()
-    //Delete this
-    console.log('No Login')
 }
 
 export const SignInWithLink = () => {

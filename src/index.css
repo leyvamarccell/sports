@@ -63,113 +63,6 @@ button:hover {
     background-color: red;
 }
 
-.welcome {
-  width: 340px;
-}
-
-.card-container {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-}
-
-.section-card {
-  display: flex;
-}
-
-
-
-.gift-card-container {
-  display: grid;
-  justify-content: center;
-  grid-template-columns: repeat(6, auto);
-  gap: 20px;
-}
-
-.gift-card-container-app {
-  width: auto;
-  padding-right: 300px;
-  padding-left: 300px;
-  display: grid;
-}
-
-.gift-card-img {
-  border: 1px solid grey;
-  border-radius: 10px;
-}
-
-.button {
-  margin-right: auto;
-}
-.button1 {
-  margin-left: 9px;
-}
-
-.text-card {
-  margin-left: 143px;
-  margin-right: 10;
-}
-
-.services-container {
-  width: 412px;
-  height: auto;
-}
-
-.services-container-app {
-  display: grid;
-  justify-content: center;
-  gap: 30px;
-  margin-bottom: 30px;
-}
-
-@media (max-width: 500px) {
-  .services-container {
-   width: 350px;
-    margin: auto;
-  }
-}
-
-@media (min-width: 830px) {
-  .services-container-app {
-    grid-template-columns: repeat(2, auto);
-  }
-}
-
-@media (min-width: 1400px) {
-  .services-container-app {
-    grid-template-columns: repeat(3, auto);
-  }
-}
-
-
-.image-services {
-  display: flex;
-  justify-content: center;
-}
-
-.link-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-  cursor: pointer;
-}
-
-.portada {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-}
-
-.datos-container {
-  width: 921px;
-}
-
-.visa-container {
-  width: 412px;
-  height: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
 
 .collapse-container {
   padding: 7px;
@@ -179,6 +72,12 @@ button:hover {
 @media (min-width: 700px) {
   .collapse-container {
     width: 600px;
+  }
+}
+
+@media (min-width: 800px) {
+  .collapse-container {
+    width: 850px;
   }
 }
 
@@ -194,7 +93,7 @@ button:hover {
 }
 
 .item-container {
-  border: 1px solid black;
+  border: 1px solid gray;
   border-radius: 10px;
   width: 120px;
   display: flex;
@@ -213,10 +112,62 @@ button:hover {
   gap: 10px;
 }
 
+.input-retirar {
+  width: 250px;
+  height: 35px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  outline: none;
+  margin-right: 19px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #242424;
+  font-weight: 600;
+}
+.input-retirar-container {
+  margin: auto;
+}
+
 @media (min-width: 600px) {
   .collapse-content {
     grid-template-columns: repeat(3, auto);
   }
+  .input-retirar {
+    width: 500px;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    outline: none;
+    margin-right: 19px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #242424;
+    font-weight: 600;
+  }
+  .input-retirar-container {
+    margin: auto;
+  }
+ 
+}
+
+
+@media (min-width: 700px) {
+  .collapse-content {
+    grid-template-columns: repeat(5, auto);
+  }
+  .input-retirar {
+    width: 700px;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    outline: none;
+    margin-right: 19px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #242424;
+    font-weight: 600;
+  }
+
 }
 
 .collapse-group {
@@ -302,65 +253,111 @@ display: flex;
   margin-left: 20px;
 }
 
-.card-container {
+.img-google {
+  margin-right: 10px;
+}
+
+.google-login-button {
+  border: 1px solid gray;
+  height: 40px;
+}
+
+.saldo-info-container {
   margin: 10px;
 }
 
-.card-div {
+.saldo-info-div {
   display: flex;
-}
-
-.text-card-h3 {
-  padding: 0;
-  margin: 0;
-}
-.text-card-p {
-  padding-right: 20px;
-  padding-left: 10px;
-
-}
-
-.apuesta-sports-container {
-  padding: 10px;
-}
-
-.div-apuesta {
- background-color: darkgrey;
-  width: 280px;
-  height: 60px;
-  border-radius: 10px;
-  padding-top: 10px;
-  padding-left: 20px;
-}
-
-.div-apuesta:hover {
-  
-}
-
-.text-apuesta {
-  padding: 0;
-  margin: 0;
-  color: lightcoral;
-  margin-left: 10px;
-}
-
-.text-tasa {
-  color: #1a1a1a;
-  margin-bottom: 10px;
-}
-
-.container-apuesta {
-  display: grid;
   justify-content: center;
-  margin-right: 23px;
+  margin-right: 25px;
   gap: 10px;
 }
 
-.apuesta-text  {
-  padding: 0;
-  margin: 0;
+.text-saldo-info {
+  margin: auto;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-right: 25px;
 }
 
-.img-google {
-  margin-right: 20px;
+.servicios-container {
+  background-color: white;
+  box-shadow: 1px 1px 10px gray;
+  margin: 10px;
+  border-radius: 10px;
+  padding: 5px;
+  margin-top: 20px;
 }
+
+.img-card-container {
+display: flex;
+justify-content: center;
+}
+
+.img-card {
+  border-radius: 10px;
+}
+
+.servicios-container {
+  display: flex;
+}
+
+.img-servicios-container {
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+.text-servicios-container {
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  padding-right: 5px;
+}
+
+.text-servicios {
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+
+.contacto-container {
+  background-color: white;
+  box-shadow: 1px 1px 10px gray;
+  margin: 10px;
+  border-radius: 10px;
+  padding: 5px;
+  margin-top: 20px;
+}
+
+.qr-code-container {
+  margin: auto;
+}
+
+.modal-text-depositar {
+  margin: auto;
+  margin-top: 0px;
+  font-weight: 600;
+  }
+
+  .modal-text-depositar-2 {
+    margin: auto;
+    margin-top: 15px;
+  }
+  
+ .card-ligas {
+  width: 120px;
+  height: 110px;
+  display: flex;
+  
+  position: relative;
+  align-items: center;
+  border-radius: 16px;
+  justify-content: center;
+ }
+
+ .card-ligas-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+ }
+
+

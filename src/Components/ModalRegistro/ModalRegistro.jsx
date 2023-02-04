@@ -2,44 +2,51 @@ import React from "react";
 import { Modal, Input, Row, Checkbox, Button, Text} from "@nextui-org/react";
 import { Mail } from "./Mail";
 import { Password } from "./Password";
-import { CreateUserWithEmailAndPassword, SignInWithEmail } from "../Auth";
-import { SignInWithGoogle, SignOut } from "../Auth";
+import { CreateUserWithEmailAndPassword } from "../Auth"
 import { state } from "../Auth";
-import { addUsers } from "../Database";
 import { useState } from "react";
-import { getDocs, doc, collection, getDoc} from "firebase/firestore";
-import { db } from "../firebase";
-import { userEmail } from "../Auth";
+import { getDoc, doc } from "firebase/firestore";
+import { db } from '../firebase.js'
+import { userEmail } from "../Auth.js";
+import { Toaster } from "react-hot-toast";
+import { addUsers } from "../Database";
+import Users from '../User'
 
-export let emailLogin
-export let passwordLogin
+export let email
+export let password
+export let passwordCheck
 
 export default function App() {
-  
+
   const [value, setValue] = useState({})
  
-setTimeout(() => {
-  getDoc(doc(db, 'users', userEmail))
-  .then(res => setValue(res.data()))
+  setTimeout(() => {
+    getDoc(doc(db, 'users', userEmail))
+    .then(res => setValue(res.data()))
+  
+  }, 4000)
+     
+  
+    //res => res.forEach(data =>  setValue(data.data()))
+    
+    const image = value.image
+  
 
-}, 4000)
-   
-
-  //res => res.forEach(data =>  setValue(data.data()))
-
-  const saldo = value.saldo
 
   const [visible, setVisible] = React.useState(false);
-
   const handler = () => setVisible(true);
-
   const closeHandler = () => {
     setVisible(false);
   };
   return (
     <div>
     {
-      state ? <div><h4>${saldo}</h4></div> : <Button auto color="gradient" shadow onPress={handler}>Iniciar sesión</Button> 
+      state ? <div>
+      <Users image={image}/>
+      
+      </div>: <Button auto color="primary" flat  onPress={handler}>
+      Registrarse
+      </Button> 
     }
    
       <Modal
@@ -53,7 +60,7 @@ setTimeout(() => {
           <Text id="modal-title" size={18}>
             
             <Text b size={18}>
-              Iniciar Sesión
+              Registrarse
             </Text>
           </Text>
         </Modal.Header>
@@ -66,7 +73,7 @@ setTimeout(() => {
             size="lg"
             placeholder="Email"
             contentLeft={<Mail fill="currentColor" />}
-            onChange={e => emailLogin = e.target.value}
+            onChange={e => email = e.target.value}
           />
           <Input
             clearable
@@ -76,35 +83,42 @@ setTimeout(() => {
             size="lg"
             placeholder="Password"
             contentLeft={<Password fill="currentColor" />}
-            onChange={e => passwordLogin = e.target.value}
+            onChange={e => password = e.target.value}
+          />
+            <Input
+            clearable
+            bordered
+            fullWidth
+            color="primary"
+            size="lg"
+            placeholder="Repeat Password"
+            contentLeft={<Password fill="currentColor" />}
+            onChange={e => passwordCheck = e.target.value}
           />
          
-  
           <Row justify="space-between">
             <Checkbox>
               <Text size={14}>Remember me</Text>
             </Checkbox>
-            <Text size={14}>Forgot password?</Text>
+           
           </Row>
-          <button onClick={ () => {
-             SignInWithGoogle()
-             setTimeout(() => {
-              if(saldo === undefined) addUsers()
-              else ''
-             }, 10000)
-             
-          }}><img height={20} src="https://www.svgrepo.com/show/475656/google-color.svg" className="img-google" alt="" /></button>
-         
         </Modal.Body>
         <Modal.Footer>
           <Button auto flat color="error" onPress={closeHandler}>
-            Close
+            Cerrar
           </Button>
-          <Button auto onPress={SignInWithEmail}>
-            Sign up
+          <Button auto onPress={() => {
+            closeHandler()
+            CreateUserWithEmailAndPassword()
+            setTimeout(() => {
+              addUsers()
+            }, 5000)
+          }}>
+           Registrarse
           </Button>
         </Modal.Footer>
       </Modal>
+      <Toaster/>
     </div>
   );
 }
