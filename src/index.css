@@ -262,62 +262,6 @@ display: flex;
   height: 40px;
 }
 
-.saldo-info-container {
-  margin: 10px;
-}
-
-.saldo-info-div {
-  display: flex;
-  justify-content: center;
-  margin-right: 25px;
-  gap: 10px;
-}
-
-.text-saldo-info {
-  margin: auto;
-  padding-top: 10px;
-  padding-bottom: 20px;
-  padding-right: 25px;
-}
-
-.servicios-container {
-  background-color: white;
-  box-shadow: 1px 1px 10px gray;
-  margin: 10px;
-  border-radius: 10px;
-  padding: 5px;
-  margin-top: 20px;
-}
-
-.img-card-container {
-display: flex;
-justify-content: center;
-}
-
-.img-card {
-  border-radius: 10px;
-}
-
-.servicios-container {
-  display: flex;
-}
-
-.img-servicios-container {
-  padding-left: 20px;
-  padding-top: 10px;
-}
-
-.text-servicios-container {
-  padding-left: 20px;
-  padding-top: 5px;
-  padding-bottom: 10px;
-  padding-right: 5px;
-}
-
-.text-servicios {
-  margin-bottom: 0;
-  margin-top: 5px;
-}
 
 .contacto-container {
   background-color: white;
@@ -342,22 +286,89 @@ justify-content: center;
     margin: auto;
     margin-top: 15px;
   }
-  
- .card-ligas {
-  width: 120px;
-  height: 110px;
-  display: flex;
-  
-  position: relative;
-  align-items: center;
-  border-radius: 16px;
-  justify-content: center;
+
+ .saldo-info-container {
+  padding: 10px;
  }
 
- .card-ligas-container {
+ .button-info-saldo {
   display: flex;
   justify-content: center;
+  margin-right: 25px;
   gap: 10px;
  }
 
+ .saldo-info-text {
+  display: flex;
+  justify-content: center;
+  margin-right: 25px;
+  margin-bottom: 10px;
+ }
 
+.servicios-container {
+  padding: 10px;
+}
+
+.servicios-img-container {
+  display: flex;
+  justify-content: center;
+  margin-right: 25px;
+}
+
+.servicios-text-container {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.text-servicios {
+  margin-top: 15px;
+  margin-bottom: 0;
+  font-weight: 700;
+}
+
+.text-servicios-2 {
+  margin-top: 4px;
+}
+
+.text-servicios-div {
+  display: flex;
+  justify-content: center;
+  margin-right: 25px;
+}
+
+.visa-container {
+  padding: 10px;
+}
+
+.visa-div {
+  display: flex;
+  gap: 20px;
+  padding-top: 10px ;
+  padding-bottom: 10px;
+  padding-left: 30px;
+}
+
+.precios-container {
+  padding: 5px;
+}
+
+.precios-div {
+display: flex;
+}
+
+.img-precios {
+  margin-left: 15px;
+  margin-top: 5px;
+  background-color: rgb(230, 230, 230);
+  border-radius: 10px;
+}
+
+.precios-prices {
+  margin-left: 100px;
+}
+
+.precios-text-prices {
+  color: #28c76f;
+  margin-left: 100px;
+  text-align: right;
+}

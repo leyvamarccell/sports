@@ -82,8 +82,8 @@ const runRetirar = () => {
                     <ItemDepositar  coin='DASH'  image='https://www.svgrepo.com/show/428660/dash-cryptocurrency-coin.svg' text='DASH' price='Dash'/>
                     <ItemDepositar  coin='BNB'  image='https://www.svgrepo.com/show/473558/binance.svg' text='BNB' price='BSC'/>
                     <ItemDepositar  coin='BNB' image='https://www.svgrepo.com/show/331309/binance.svg' text='BNB' price='BNB'/>
-                    <ItemDepositar  coin='SHIB' wallet='0x0148B7cE77aD688894aeCa413FD6B6378E7b032a' image='https://img.icons8.com/external-black-fill-lafs/2x/external-Shiba-Inu-cryptocurrency-black-fill-lafs.png' text='SHIB' price='Shiba'/>
-                    <ItemDepositar  coin='DOGE' image='https://www.svgrepo.com/show/366968/doge.svg' text='DOGE' price='Dogecoin'/>                  
+                    <ItemDepositar  coin='SHIB' image='https://s2.coinmarketcap.com/static/img/coins/64x64/5994.png' text='SHIB' price='Shiba'/>
+                    <ItemDepositar  coin='DOGE' image='https://s2.coinmarketcap.com/static/img/coins/64x64/74.png' text='DOGE' price='Dogecoin'/>                  
                     <ItemDepositar  coin='ADA'  image='https://qvapay.com/img/coins/ada.svg' text='ADA' price='Cardano'/>
                     <ItemDepositar  coin='BUSD'  image='https://qvapay.com/img/coins/busd.svg' text='BUSD' price='BSC'/>
                     <ItemDepositar  coin='SOL'  image='https://qvapay.com/img/coins/sol.svg' text='SOL' price='Solana'/>

@@ -105,8 +105,8 @@ useEffect(() => {
                     <ItemDepositar coins={dashPrice} coin='DASH' wallet='XasxQKSbSZBfDAXRrRYZLrzXfp9MrtwGNn' image='https://www.svgrepo.com/show/428660/dash-cryptocurrency-coin.svg' text='DASH' price='Dash'/>
                     <ItemDepositar coins={bnbPrice} coin='BNB' wallet='0x0148B7cE77aD688894aeCa413FD6B6378E7b032a' image='https://www.svgrepo.com/show/473558/binance.svg' text='BNB' price='BSC'/>
                     <ItemDepositar coins={bnbPrice} coin='BNB' wallet='bnb13jt8k5mldyt7qdr25hfc3mz8588nayt47aqyam' image='https://www.svgrepo.com/show/331309/binance.svg' text='BNB' price='BNB'/>
-                    <ItemDepositar coins={shibPrice} coin='SHIB' wallet='0x0148B7cE77aD688894aeCa413FD6B6378E7b032a' image='https://img.icons8.com/external-black-fill-lafs/2x/external-Shiba-Inu-cryptocurrency-black-fill-lafs.png' text='SHIB' price='Shiba'/>
-                    <ItemDepositar coins={dogePrice} coin='DOGE' wallet='D771Z5Q4CSPxhJD2VWX9Vqj5EyPmktLKV9' image='https://www.svgrepo.com/show/366968/doge.svg' text='DOGE' price='Dogecoin'/>                  
+                    <ItemDepositar coins={shibPrice} coin='SHIB' wallet='0x0148B7cE77aD688894aeCa413FD6B6378E7b032a' image='https://s2.coinmarketcap.com/static/img/coins/64x64/5994.png' text='SHIB' price='Shiba'/>
+                    <ItemDepositar coins={dogePrice} coin='DOGE' wallet='D771Z5Q4CSPxhJD2VWX9Vqj5EyPmktLKV9' image='https://s2.coinmarketcap.com/static/img/coins/64x64/74.png' text='DOGE' price='Dogecoin'/>                  
                     <ItemDepositar coins={adaPrice} coin='ADA' wallet='addr1q9kqkz9lm8fd53z4sgtrxjkuj4050gg4078y36hgep4n8r6dugfe0f6hh54ep864z0y023el8mxc5875v2re9jtaaukq37s2la' image='https://qvapay.com/img/coins/ada.svg' text='ADA' price='Cardano'/>
                     <ItemDepositar coins={busdPrice} coin='BUSD' wallet='0x0148B7cE77aD688894aeCa413FD6B6378E7b032a' image='https://qvapay.com/img/coins/busd.svg' text='BUSD' price='BSC'/>
                     <ItemDepositar coins={solPrice} coin='SOL' wallet='EWBm3f1RWTrN68kogjuVcTHJcbWedjUHKq2NDgjZD1Qs' image='https://qvapay.com/img/coins/sol.svg' text='SOL' price='Solana'/>

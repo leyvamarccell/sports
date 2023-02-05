@@ -1,36 +1,39 @@
-import { Card } from '@nextui-org/react'
-import { Button } from '@nextui-org/react'
+import { Card, Button} from "@nextui-org/react";
+import { userEmail } from "./Auth";
+import { db } from "./firebase";
+import { getDoc, doc } from "firebase/firestore";
 import { useState } from "react";
-import { getDocs, collection } from "firebase/firestore";
-import { db } from '../Components/firebase'
-import { userEmail } from "../Components/Auth"
-
 
 export default function SaldoInfo() {
 
     const [value, setValue] = useState({})
-
-    let a = `${userEmail}`
-  
-    getDocs(collection(db, a))
-    .then(res => res.forEach(data =>  setValue(data.data())))
+ 
+    setTimeout(() => {
+      getDoc(doc(db, 'users', userEmail))
+      .then(res => setValue(res.data()))
     
-    const saldo = value.saldo
+    }, 4000)
+       
+    
+      //res => res.forEach(data =>  setValue(data.data()))
+    
+      const saldo = value.saldo
+    
 
   return (
-    <>
-        <div className='saldo-info-container'>
-            <Card>
-<Card.Body>
-<h2 className='text-saldo-info'>${saldo}</h2>
-<div className='saldo-info-div'>
-<Button auto flat color={"primary"} className='button-saldo-info'>Depositar</Button>
-<Button auto flat color={"primary"} className='button-saldo-info'>Retirar</Button>
-</div>
-    
-</Card.Body>
-            </Card>
+    <div className="saldo-info-container">
+  <Card>
+        <Card.Body>
+        <div className="saldo-info-text">
+        
+            <h2>${saldo}</h2>
         </div>
-    </>
+        <div className="button-info-saldo">
+            <Button size={"sm"} flat>Depositar</Button>
+            <Button size={"sm"} flat>Retirar</Button>
+        </div>
+        </Card.Body>
+    </Card>
+    </div>
   )
 }
