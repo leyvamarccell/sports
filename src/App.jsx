@@ -2,20 +2,18 @@ import './App.css'
 import Nav from '../src/Components/Nav/Nav'
 import SaldoInfo from './Components/SaldoInfo'
 import Servicios from './Components/Servicios'
-import CardVisa from './Components/CardVisa'
 import Precios from './Components/Precios'
+import Footer from './Components/Footer'
+import Drop from './Components/DropDown'
 
 function App() {
 
   return (
     <>
 <Nav/>
+<Drop/>
 <div>
   <SaldoInfo/>
-</div>
-
-<div>
-  <CardVisa/>
 </div>
 
 <div>
@@ -29,7 +27,7 @@ function App() {
   <Precios/>
  
 </div>
-
+<Footer/>
     </>
 
   )

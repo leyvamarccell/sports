@@ -18,9 +18,7 @@ export default function App() {
         </Navbar.Brand>
        
         <Navbar.Content>
-       <Navbar.Item>
-<img height={25} src="https://www.svgrepo.com/show/304489/notification.svg" alt="" />
-       </Navbar.Item>
+
             <Navbar.Item>
         <Modal/>
             </Navbar.Item>

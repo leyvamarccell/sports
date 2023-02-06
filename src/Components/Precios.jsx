@@ -26,11 +26,11 @@ const [coins, setCoins] = useState([])
                             return(
                                 <div className="precios-div">
                                 <div>
-                                <User src={coin.image} name={coin.name} description={coin.symbol}/>
+                                <User src={coin.image} name={coin.symbol}/>
                                 
                                 </div>
                                 <div>
-                                    <p>{coin.current_price}</p>
+                                    <p className="text-price">$ {coin.current_price}</p>
                                 </div>
                                 </div>
                                

@@ -43,9 +43,8 @@ export default function App() {
     {
       state ? <div>
       <Users image={image}/>
-      
       </div>: <Button auto color="primary" flat  onPress={handler}>
-      Registrarse
+      Sign Up
       </Button> 
     }
    

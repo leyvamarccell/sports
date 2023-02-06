@@ -28,7 +28,8 @@ const checkCoin = () => {
   else if(coin) return `Wallet de ${coin}`
 }
 
-  
+ 
+const [input, setInput] = useState()
 const [value, setValue] = useState({})
  
 setTimeout(() => {
@@ -66,7 +67,15 @@ const runRetirar = () => {
 <div className='collapse-container'>
     <Card>
     <div className='input-depositar-container'>
-    <input type="text" onChange={(e) => inputValue = e.target.value} className='input-depositar' placeholder='$0.00'/>
+    <input type="text" onChange={(e) => {
+      setInput(e.target.value)
+      inputValue = e.target.value
+    }} className='input-depositar' placeholder='$0.00'/>
+  
+    </div>
+    <div className='input-depositar-container p'>
+    
+<h3>{Number(input) * 0.04 + Number(input) }</h3>
     </div>
             <Card.Body>
                 <Collapse.Group className='collapse-group'>
@@ -99,30 +108,19 @@ const runRetirar = () => {
                     </Collapse>
                     <Collapse title='Bank:' >
                     <div className='collapse-content'>
-                    <ItemDepositar  coin='Zelle' image='https://qvapay.com/img/coins/zelle.svg' text='Zelle' price='Zelle'/>
+                
                     <ItemDepositar  coin='CUP' image='https://www.svgrepo.com/show/399943/bank.svg' text='CUP' price='CUP'/>
                     <ItemDepositar  coin='MLC' image='https://www.svgrepo.com/show/395853/bank.svg' text='MLC' price='USD'/>
-                    <ItemDepositar coin='EUR' image='https://qvapay.com/img/coins/bank.svg' text='EUR' price='Euro'/>
-                    <ItemDepositar  coin='MasterCard' image='https://www.svgrepo.com/show/355117/mastercard.svg' text='MC' price='Card'/>
-                    <ItemDepositar coin='Visa' image='https://www.svgrepo.com/show/362033/visa.svg' text='Visa' price='Card'/>
+                   
                     </div>                
                     </Collapse>
  
                     <Collapse title='E-Wallet'>
                     
                     <div className='collapse-content'>
-                    <ItemDepositar wallet='' coin='PayPal' image='https://www.svgrepo.com/show/349473/paypal.svg' text='PayPal' price='PayPal'/>
-                    <ItemDepositar wallet='' coin='WebMoney' image='https://qvapay.com/img/coins/webmoney.svg' text='WM' price='WebMon'/>
-                    <ItemDepositar wallet='' coin='Airtm' image='https://qvapay.com/img/coins/airtm.svg' text='AIRTM' price='Airtm'/>
+                   
                     <ItemDepositar wallet='+5356093822' coin='Etecsa' image='https://qvapay.com/img/coins/etecsa.svg' text='Etecsa' price='Etecsa'/>
-                    <ItemDepositar wallet='' coin='MyBambu' image='https://qvapay.com/img/coins/mybambu.svg' text='MYBAM' price='MyBamb'/>
-                    <ItemDepositar wallet='' coin='Perfect Money' image='https://qvapay.com/img/coins/pm.svg' text='PM' price='PerfectM'/>
-                    <ItemDepositar wallet='' coin='CashApp' image='https://qvapay.com/img/coins/cashapp.svg' text='CA' price='CashApp'/>
-                    <ItemDepositar wallet='' coin='TropiPay' image='https://qvapay.com/img/coins/tropipay.svg' text='TrPay' price='TropiPay'/>
-                    <ItemDepositar wallet='' coin='Payeer' image='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOUAAAB4CAMAAAA678W5AAAAZlBMVEX4+PgDqfT////++/j///gAofRPuPXJ4/cApPQAp/Si1PkApfO64PvF5vv//fjn9f4xrPVqvvf2/P/u9Pik1vbQ6fdwwPVBsfaw2/mXz/Zau/XB4vuJzPbu9/5jv/U9tPXb7Ph3xveBok3oAAADQklEQVR4nO2cbbNrMBCAkZM0EapVxDv9/3/yctFzOkdob82VxD7fZGqmz+yKxSaWBQAAAAAAAAAAAAAA8B9A6Pz1HmeE9v7Tb9H93ZsflXVOXievy8i/WdqYIivOGowp5cx+HcYpxbjJYksLz684sek7fk+u1E7ir70VVkFW+c+Kk2ipejhRQOhHjj2UBEpropvgH0vaNhc3hTVR0HyWrRNMqBzNeotI9vB6bxUp5/Tza3KCpue9deZB1VaR7OGVmjmLsk0tMzUtb2SbqWeAkdveQnMgf8tQdsH0VQwmyrabe3qomimbbxzLfG+hWTZ17NlbaI4b3lgSKzj9oFZu+XvuZWz94RMrWOWhWGrJiFcUhf+gKDzPLXO+MlvhWEHLk9SSus4MVXzHi/HEJwMsOwKyNC2bYumE5ULWGmPpOKV8zjLI0rlLk1ZXyzAYqH5em8I0y+IyIspvUVd2aWpr+bhzUB49NGUpq79lV4x7jytTEkwTLG07HEdlRZMRlnwaDSSnmWGZTJaSl7hGWLImGEar6/z8o63l07Box7uoaZZPqdm0ZsbSe8rYfKwMKskbTiMs+f1R45ls6Y+jraT4McGS1lPtkxpWFfyw5OJRr8s+PGhrSTnr4ZyTdpIMZOfpannKrwNJ6jyQPkbraumEI9+Ozkl2lr6Wv5HdRoyyrBbeVRpjufhC1hDLMOXGv3WO3ZU2L10tWzcacMuaiMVAamzp4b47tG8qfaUjUVvLt77Jg+VegOURLRm7XGZaDcyyZFc3TaO72Zb0npLuGdqN1ntENLYUPmVCMOrKP8/qb0k9QUu3dCmVd84YYOlj6tYixthbkdTdMotawrBvsmWU4+hyKfhF/nv9LW07psLmDU1X1ytoZsmToPpL3yfMSHEVgkTlah2kpOXCnMmbvIcMByTLXDdZL/aU7DZc6By12cB4wLsK74WKVsXO0WN0AR+ko/sY3fnbr7TY22iOY6yaOcYKqIOsZrPCTWMZ7q0j4RCrTLucfaFuew2eKJqvVr/6W/7N9S3UXv19iJX8fTTzDXZlyFWOZM8hdtiwjrFbinWQnW+sYRej0z/sYnTSaBejAfN3pAIAAAAAAAAAAAAAQFv+AJ/pSl0ETb/hAAAAAElFTkSuQmCC' text='Payeer' price='Payeer'/>
-                    <ItemDepositar wallet='' coin='Uphold' image='https://qvapay.com/img/coins/uphold.svg' text='UPH' price='Uphold'/>
-                    <ItemDepositar wallet='' coin='Google Pay' image='https://www.svgrepo.com/show/452222/google-pay.svg' text='GooPay' price='Google'/>
-                    <ItemDepositar wallet='' coin='Apple Pay' image='https://www.svgrepo.com/show/452157/apple-pay.svg' text='AppPay' price='Apple'/>
+                   
                     </div>
                                    
                     </Collapse>

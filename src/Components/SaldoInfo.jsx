@@ -3,6 +3,8 @@ import { userEmail } from "./Auth";
 import { db } from "./firebase";
 import { getDoc, doc } from "firebase/firestore";
 import { useState } from "react";
+import { state } from "./Auth";
+import { toast } from "react-hot-toast";
 
 export default function SaldoInfo() {
 
@@ -29,8 +31,14 @@ export default function SaldoInfo() {
             <h2>${saldo}</h2>
         </div>
         <div className="button-info-saldo">
-            <Button size={"sm"} flat>Depositar</Button>
-            <Button size={"sm"} flat>Retirar</Button>
+            <Button size={"sm"} flat onClick={() => {
+              if(state === false) toast.error('Debe autenticarse')
+              else window.open('/depositar')
+            }}>Depositar</Button>
+            <Button size={"sm"} flat onClick={() => {
+                if(state === false) toast.error('Debe autenticarse')
+              else window.open('/retirar')
+            }}>Retirar</Button>
         </div>
         </Card.Body>
     </Card>

@@ -39,7 +39,7 @@ setTimeout(() => {
   return (
     <div>
     {
-      state ? <div><h4>${saldo}</h4></div> : <Button auto color="gradient" shadow onPress={handler}>Iniciar sesión</Button> 
+      state ? <div><h4>${saldo}</h4></div> : <Button auto color="gradient" shadow onPress={handler}>Sign In</Button> 
     }
    
       <Modal
@@ -98,10 +98,10 @@ setTimeout(() => {
         </Modal.Body>
         <Modal.Footer>
           <Button auto flat color="error" onPress={closeHandler}>
-            Close
+            Cerrar
           </Button>
           <Button auto onPress={SignInWithEmail}>
-            Sign up
+            Iniciar Sesión
           </Button>
         </Modal.Footer>
       </Modal>
