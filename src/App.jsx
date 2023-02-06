@@ -27,7 +27,7 @@ function App() {
   <Precios/>
  
 </div>
-<Footer/>
+
     </>
 
   )
