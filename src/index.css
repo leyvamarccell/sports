@@ -63,342 +63,115 @@ button:hover {
     background-color: red;
 }
 
-
-.collapse-container {
-  padding: 7px;
-  margin: auto;
-}
-
-@media (min-width: 700px) {
-  .collapse-container {
-    width: 600px;
-  }
-}
-
-@media (min-width: 800px) {
-  .collapse-container {
-    width: 850px;
-  }
-}
-
-.button-depositar {
-  display: flex;
-  justify-content: center;
-  margin-right: 10px;
-}
-
-.input-depositar {
-  display: flex;
-  justify-content: center;
-}
-
-.item-container {
-  border: 1px solid gray;
+.img-card {
   border-radius: 10px;
-  width: 120px;
+  
+}
+
+.div-img-container {
   display: flex;
-  padding-top: 2px;
-  padding-bottom: 2px;
-}
-
-.image-depositar {
-  padding-left: 5px;
-}
-
-.collapse-content {
-  display: grid;
   justify-content: center;
-  grid-template-columns: repeat(2, auto);
-  gap: 10px;
+  margin-bottom: 20px;
 }
 
-.input-retirar {
-  width: 250px;
-  height: 35px;
-  border-radius: 5px;
+.pay-container {
+  margin: 5px;
+  margin-bottom: 15px;
+}
+
+.pepe {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 10px;
+}
+
+.pay-amount-container {
+display: grid;
+grid-template-columns: repeat(2, auto);
+justify-content: center;
+gap:10px;
+margin-right: 25px;
+}
+
+.pay-amount {
   border: 1px solid gray;
-  outline: none;
-  margin-right: 19px;
-  padding-left: 20px;
-  padding-right: 20px;
-  color: #242424;
-  font-weight: 600;
-}
-.input-retirar-container {
-  margin: auto;
-}
-
-@media (min-width: 600px) {
-  .collapse-content {
-    grid-template-columns: repeat(3, auto);
-  }
-  .input-retirar {
-    width: 500px;
-    height: 35px;
-    border-radius: 5px;
-    border: 1px solid gray;
-    outline: none;
-    margin-right: 19px;
-    padding-left: 20px;
-    padding-right: 20px;
-    color: #242424;
-    font-weight: 600;
-  }
-  .input-retirar-container {
-    margin: auto;
-  }
+  padding: 15px;
+  width: 118px;
+  border-radius: 10px;
  
 }
 
-
-@media (min-width: 700px) {
-  .collapse-content {
-    grid-template-columns: repeat(5, auto);
-  }
-  .input-retirar {
-    width: 700px;
-    height: 35px;
-    border-radius: 5px;
-    border: 1px solid gray;
-    outline: none;
-    margin-right: 19px;
-    padding-left: 20px;
-    padding-right: 20px;
-    color: #242424;
-    font-weight: 600;
-  }
-
+.pay-amount:hover {
+background-color: #747bff
 }
 
-.collapse-group {
-  
-  padding-right: 30px;
+.pay-amount-coin {
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding-top: 6px;
+  padding-right: 10px;
 }
 
-.input-depositar {
-height: 70px;
-border-radius: 10px;
-width: 400px;
-border: none;
-font-size: 40px;
-font-weight: 600;
-color:rgb(100, 100, 100);
-outline: none;
-padding-left: 10px;
-padding-right: 10px;
-text-align: center;
-}
-.input-depositar:hover {
-  box-shadow: 2px 2px 12px gainsboro
-}
-
-.input-depositar-container {
+.pay_3 {
   display: flex;
   justify-content: center;
-  padding-left: 30px;
-  padding-right: 30px;
-  margin-top: 30px;
-  
-  }
-
-  .button-dep {
-    margin-top: 25px;
-  }
-
-  .text-depositar {
-    margin-left: 10px;
-  }
-
-.card-juegos{
- background-color: rgb(210, 210, 210);
+  margin-right: 25px;
 }
 
-.card-juegos-container {
-display: flex;
-}
-
-.img-juegos {
-  height: 200px;
-}
-
-@media (max-width: 500px) {
-  .img-juegos {
-    height: 100px;
-  }
-}
-
-.info-container {
-  margin: 10px;
-}
-
-.info-text {
+.input-email {
+  width: 220px;
+  outline: none;
+  border-radius: 8px;
+  height: 30px;
+  border: 1px solid gray;
   padding-left: 10px;
   padding-right: 10px;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-}
 
-.precios-container {
-  margin: 10px;
-}
-
-.coins {
-  display: flex;
-}
-
-.price-text {
-  
-  margin-left: 20px;
-}
-
-.coin-text {
-  margin-left: 20px;
-}
-
-.img-google {
-  margin-right: 10px;
-}
-
-.google-login-button {
-  border: 1px solid gray;
-  height: 40px;
 }
 
 
-.contacto-container {
-  background-color: white;
-  box-shadow: 1px 1px 10px gray;
-  margin: 10px;
-  border-radius: 10px;
-  padding: 5px;
-  margin-top: 20px;
+.input-email:hover {
+ border-color: #646cff;
+
 }
 
-.qr-code-container {
+.button-pay {
   margin: auto;
 }
 
-.modal-text-depositar {
-  margin: auto;
-  margin-top: 0px;
-  font-weight: 600;
-  }
-
-  .modal-text-depositar-2 {
-    margin: auto;
-    margin-top: 15px;
-  }
-
- .saldo-info-container {
-  padding: 10px;
- }
-
- .button-info-saldo {
-  display: flex;
-  justify-content: center;
-  margin-right: 25px;
-  gap: 10px;
- }
-
- .saldo-info-text {
-  display: flex;
-  justify-content: center;
-  margin-right: 25px;
-  margin-bottom: 10px;
- }
-
-.servicios-container {
-  padding: 10px;
-}
-
-.servicios-img-container {
-  display: flex;
-  justify-content: center;
+.button  {
   margin-right: 25px;
 }
 
-.servicios-text-container {
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-.text-servicios {
-  margin-top: 15px;
-  margin-bottom: 0;
-  font-weight: 700;
-}
-
-.text-servicios-2 {
-  margin-top: 4px;
-}
-
-.text-servicios-div {
-  display: flex;
-  justify-content: center;
-  margin-right: 25px;
-}
-
-.precios-container {
+.collapse {
   padding: 5px;
 }
 
-.precios-div {
-display: flex;
+.collapse-content {
+  padding: 10px;
 }
 
-.img-precios {
-  margin-left: 15px;
+.p-copy {
+  margin-left: 20px;
+  color: #747bff;
+}
+.modal {
+  padding: 20px;
+}
+
+.qr-container {
+  margin: auto;
+}
+
+.text-p {
+  margin: auto;
+}
+
+.text {
+  margin-right: 25px;
   margin-top: 5px;
-  background-color: rgb(230, 230, 230);
-  border-radius: 10px;
 }
 
-.precios-prices {
-  margin-left: 100px;
-}
-
-.precios-text-prices {
-  color: #28c76f;
-  margin-left: 80px;
-  text-align: right;
-}
-
-
-.text-price {
-  margin-left: 100px;
-  color: #28c76f;
-}
-a {
-  color: #646cff;
-  
-}
-
-.footer-div {
-  display: flex;
-  gap: 20px;
-  margin-top: 10px;
-}
-
-.drop {
-  margin-left: 20px;
-}
-
-.div-retirar {
-  width: 250px;
-  height: 35px;
-  border-radius: 5px;
-  border: 1px solid gray;
-  outline: none;
-  margin-right: 19px;
-  padding-left: 20px;
-  padding-right: 20px;
-  color: #242424;
-  font-weight: 600;
-}
-
-.p {
-  background-color: rgb(210, 210, 210);
-  margin-top: 10px;
-  margin-left: 20px;
-  margin-right: 20px;
-  border-radius: 5px;
+div {
+  cursor: pointer;
 }

@@ -1,8 +1,6 @@
-import { Navbar, Button, Link, Text } from "@nextui-org/react";
+import { Navbar, Text } from "@nextui-org/react";
 import { Layout } from "./Layout.jsx";
 import { AcmeLogo } from "./AcmeLogo.jsx";
-import Modal from '../Modal/Modal.jsx'
-import ModalRegistro from '../ModalRegistro/ModalRegistro'
 
 export default function App() {
 
@@ -11,21 +9,14 @@ export default function App() {
  <Layout>
       <Navbar isCompact isBordered variant="sticky">
         <Navbar.Brand>
-          <AcmeLogo />
+          <img src="https://play-lh.googleusercontent.com/mAnRtv6sEkY-H1oL1lf2My-lZxGzGGrwkgU1oUE2xYzP7SSW-5KYWfNXGqKSGuK2De4" height={30} alt="" />
           <Text b color="inherit" hideIn="xs">
-            ACME
+            FireDiamons
           </Text>
         </Navbar.Brand>
        
         <Navbar.Content>
 
-            <Navbar.Item>
-        <Modal/>
-            </Navbar.Item>
-          <Navbar.Item>
-          <ModalRegistro/>
-          </Navbar.Item>
-          
         </Navbar.Content>
       </Navbar>
     </Layout>
